@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>MeanProcess</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'> 
+
+<!-- Load CSS -->
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'> 
+
+<link rel="stylesheet" href="../src/css/meanprocess.css">
+
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+
+	html {
+		-webkit-text-size-adjust: none;
+		-webkit-font-smoothing: antialiased;
+		background-color: #f9f9f9;
+	}
+	
+	.wrap, .wrap *  {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	body {
+		font-family: "Montserrat", sans-serif;
+	}
+	
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+</head>
+
+<body>
+
+<div id="process">
+
+		<div class="mean-processbar">
+			<div class="mean-processbar-marker" data-percent="0">
+				<span class="mpb-marker"></span>
+				<span class="mean-processbar-title">Design</span>
+			</div>
+			<div class="mean-processbar-marker" data-percent="50">
+				<span class="mpb-marker"></span>
+				<span class="mean-processbar-title">Develop</span>
+			</div>
+			<div class="mean-processbar-marker" data-percent="100">
+				<span class="mpb-marker"></span>
+				<span class="mean-processbar-title">Deliver</span>
+			</div>
+			
+			<div class="mean-processbar-bar"></div>
+		</div>
+		
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script> 
+<script src="../src/js/jquery.meanprocess.js"></script> 
+
+<script>
+
+	$('#process').meanprocess();
+ 
+</script> 
+
+</body>
+</html>

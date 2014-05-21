@@ -1,0 +1,107 @@
+/*
+	-----------------------------------------------------------------
+		
+			MeanThemes ProcessBar
+			
+	-----------------------------------------------------------------
+*/	
+
+.mean-processbar {
+	width: 100%;
+	display: inline-block;	
+	position: relative;
+	margin: 20px 0;
+	padding-bottom: 20px;
+	height: 60px;
+	visibility: hidden;
+	opacity: 0;
+}	
+
+.mean-processbar.mpb-visible {
+	visibility: visible;
+}
+
+.mean-processbar .mean-processbar-bar {
+	height: 8px;
+	width: 96%;
+	background: #bac3cc;
+	position: absolute;
+	bottom: -10px;
+	left: 2%;	
+	border-radius: 10px;
+}
+
+.mean-processbar .mean-processbar-marker {
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	margin-left: 0;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.mean-processbar .mean-processbar-title {
+	display: none;
+}
+
+.mean-processbar .mean-processbar-marker span.mpb-marker {
+	display: inline;
+	position: relative;
+	color: #f3e042;
+}
+
+.mean-processbar .mean-processbar-marker span.mpb-marker:before {
+	/* font-family:'FontAwesome'; */
+	/*content: '\f041';*/
+	content: '¶';
+	font-size: 50px;
+	margin: 0 auto;
+	clear: both;
+	display: block;
+	margin-bottom: 18px;
+	height: 85px;
+} 
+
+
+/* Mobile Attributes */
+
+.mean-processbar.mpb-switch {
+	height: 300px;
+}
+
+.mean-processbar.mpb-switch .mean-processbar-bar {
+	top: 5%;
+	height: 100%;
+	width: 8px;
+	left: 50%;
+}
+
+.mean-processbar.mpb-switch .mean-processbar-marker {
+	left: 31%;
+	width: 200px;
+}
+
+.mean-processbar.mpb-switch .mean-processbar-marker span.mpb-marker:before  {
+	height: auto;
+	width: auto;
+}
+
+.mean-processbar.mpb-switch .mean-processbar-marker .mean-processbar-title {
+	padding-left: 40px;
+	line-height: 65px;
+	margin-top: 0;
+	float: left;
+}
+
+
+.mean-processbar.mpb-switch .mean-processbar-marker span.mpb-marker:before {
+	clear: none;
+	float: left;
+	margin: 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
