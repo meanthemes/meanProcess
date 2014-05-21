@@ -1,7 +1,7 @@
 meanProcess
 ===========
 
-A Simple Process Bar
+A Simple Responsive Process Bar
 
 ## Preamble
 
@@ -99,3 +99,5 @@ Add as many markers as you see fit.
 ### Help welcome
 
 Any ideas, pull requests or general help will be greatly received.
+
+[Demo](demo/meanprocess.html)
