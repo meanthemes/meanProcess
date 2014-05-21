@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Meanprocess by meanthemes</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Meanprocess</h1>
+        <p class="header">A Simple Process Bar</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/meanthemes/meanProcess/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/meanthemes/meanProcess/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/meanthemes/meanProcess">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/meanthemes">meanthemes</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="meanprocess" class="anchor" href="#meanprocess"><span class="octicon octicon-link"></span></a>meanProcess</h1>
+
+<p>A Simple Responsive Process Bar</p>
+
+<h2>
+<a name="preamble" class="anchor" href="#preamble"><span class="octicon octicon-link"></span></a>Preamble</h2>
+
+<p>OK, so this is Pre-Alpha as in completely hairbrained and up in the air test mode.</p>
+
+<p>I'm still refining most of it. e.g. full browser testing, browser resize events, mobile and device testing, semantic markup, the actual maths that powers it!</p>
+
+<p>At the moment, it has been tested (not exhaustively) on iOS and all the latest browsers for Mac.</p>
+
+<h3>
+<a name="required" class="anchor" href="#required"><span class="octicon octicon-link"></span></a>Required</h3>
+
+<ul>
+<li>jQuery (It's a jQuery plugin) 1.11.0 is tested so far.</li>
+<li>meanprocess.css (src/css)</li>
+<li>jquery.meanprocess.js (src/js)</li>
+</ul><h3>
+<a name="recommended" class="anchor" href="#recommended"><span class="octicon octicon-link"></span></a>Recommended</h3>
+
+<p>This plugin is generally developed to utilise <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a></p>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<pre><code>switchDirection: 540, // Width to switch orientation of process bar
+markerColor: '#f3e042', // Change marker color
+barColor: '#bac3cc' // Change bar color
+</code></pre>
+
+<h3>
+<a name="using-it" class="anchor" href="#using-it"><span class="octicon octicon-link"></span></a>Using it</h3>
+
+<p>Please check the demo/meanprocess.html file for the simplest setup.</p>
+
+<p>Basically, include...</p>
+
+<pre><code>&lt;link rel="stylesheet" href="../src/css/meanprocess.css"&gt;
+</code></pre>
+
+<p>in the </p>
+
+<pre><code>&lt;head&gt;
+</code></pre>
+
+<p>And load jQuery and plugin in the footer</p>
+
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"&gt;&lt;/script&gt; 
+&lt;script src="../src/js/jquery.meanprocess.js"&gt;&lt;/script&gt; 
+</code></pre>
+
+<p>Then call the function and nominate the element you want it to run on.</p>
+
+<pre><code>&lt;script&gt;
+    $('#process').meanprocess();
+&lt;/script&gt;       
+</code></pre>
+
+<p>Add the markup within the </p>
+
+<pre><code>&lt;body&gt;
+</code></pre>
+
+<p>Like this...</p>
+
+<pre><code>&lt;div class="mean-processbar"&gt;
+    &lt;div class="mean-processbar-marker" data-percent="0"&gt;
+        &lt;span class="mpb-marker"&gt;&lt;/span&gt;
+        &lt;span class="mean-processbar-title"&gt;Design&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="mean-processbar-marker" data-percent="50"&gt;
+        &lt;span class="mpb-marker"&gt;&lt;/span&gt;
+        &lt;span class="mean-processbar-title"&gt;Develop&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="mean-processbar-marker" data-percent="100"&gt;
+        &lt;span class="mpb-marker"&gt;&lt;/span&gt;
+        &lt;span class="mean-processbar-title"&gt;Deliver&lt;/span&gt;
+    &lt;/div&gt;      
+    &lt;div class="mean-processbar-bar"&gt;&lt;/div&gt;
+&lt;/div&gt;  
+</code></pre>
+
+<h3>
+<a name="configuring-marker-positions" class="anchor" href="#configuring-marker-positions"><span class="octicon octicon-link"></span></a>Configuring marker positions</h3>
+
+<p>As you may have gathered from the above every marker needs...</p>
+
+<pre><code>&lt;div class="mean-processbar-marker" data-percent="0"&gt;
+    &lt;span class="mpb-marker"&gt;&lt;/span&gt;
+    &lt;span class="mean-processbar-title"&gt;Design&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The "data-percent" - anything inbetween 0 and 100. This will tell the marker where to position itself as a percentage of the overall width or height.</p>
+
+<p>Within the</p>
+
+<pre><code>&lt;span class="mean-processbar-title"&gt;ENTER MARKER TITLE&lt;/span&gt;
+</code></pre>
+
+<p>Enter you marker title</p>
+
+<p>Add as many markers as you see fit.</p>
+
+<h3>
+<a name="help-welcome" class="anchor" href="#help-welcome"><span class="octicon octicon-link"></span></a>Help welcome</h3>
+
+<p>Any ideas, pull requests or general help will be greatly received.</p>
+
+<p><a href="demo/meanprocess.html">Demo</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
